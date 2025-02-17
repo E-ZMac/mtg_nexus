@@ -2,6 +2,14 @@
 
 
 while True:
-    x = input("What action do you want to perform?")
-    if x == "":
-        break
+    question = input(
+        'Enter an action:\n'
+        '1. Go to databases = "db"\n'
+        '2. Go to gui = "gui"\n'
+    )
+
+    match question:
+        case 'db':
+            database()
+        case 'gui':
+            run_gui()
